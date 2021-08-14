@@ -1,0 +1,77 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+.btnmain{
+    border: 2px solid #fff;
+    padding: 14px 40px;
+    // display: inline-flex;
+    // justify-content: center;
+    // align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: $white-cl;
+    font-family: 'PNB';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 58px;
+    @include transition($t);
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    .btn-watch{
+        width: 20px;
+    }
+    i{
+        margin-left: 16px;
+        // img{
+        //     @include transform(translateX(0px));
+        //     position: relative;
+        //     @include transition($t);
+        // }
+    }
+    &:hover{
+        background-color: $yellow-cl;
+        @include transition($t);
+        // img{
+        //     @include transform(translateX(10px));
+        //     @include transition($t);
+        // }
+    }
+}
+
+.btn{
+    font-size: 14px;
+    line-height: 58px;
+    font-family: 'PNB';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $title-cl;
+    text-decoration: none;
+
+    display: inline-flex;
+    position: relative;
+    &::before{
+        content: '';
+        height: 2px;
+        width: 40px;
+        background-color: #a9946e;
+        position: absolute;
+        bottom: 18px;
+        left: 0;
+    }
+    img{
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+        @include transform(translateX(0px));
+        @include transition($t);
+    }
+    &:hover{
+        img{
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
+    }
+}

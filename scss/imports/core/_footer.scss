@@ -1,0 +1,71 @@
+// css footer
+footer{
+    background-color: $black-cl;
+    .container{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        .copyright{
+            font-size: 12px;
+            font-family: 'PNR';
+            color: $white-cl;
+            text-transform: uppercase;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+        .logo{
+            position: absolute;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+        .backtotop{
+            cursor: pointer;
+            font-size: 12px;
+            font-family: 'PNR';
+            color: $white-cl;
+            text-transform: uppercase;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.totop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 40px;
+    z-index: 200;
+    background: $yellow-cl;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.3s;
+    &.active{
+        opacity: 1;
+        transition: 0.3s;
+    }
+    img{
+        width: 20px;
+        
+    }
+}
+
+@media (max-width: 767px) {
+    footer{
+        .container{
+            flex-direction: column;
+            .logo{
+                margin: 20px auto;
+                position: initial;
+                left: initial;
+                @include transform(initial);
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+// css components
+// &.pd{
+    //padding: var(--pdSection) 0;
+    //} 
+.textbox{
+    padding-left: 100px;
+    padding-top: 90px;
+    padding-right: 20px;
+    .titlemain{
+        font-size: 40px;
+        color: $title-cl;
+        font-family: 'PNB';
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        &::before{
+            content: '';
+            height: 2px;
+            width: 80px;
+            background-color: $black-cl;
+            position: relative;
+            margin-left: -80px;
+            left: -20px;
+            display: inline-block;
+        }
+    }
+    .description{
+        font-size: 16px;
+        color: $text-cl;
+        font-family: 'PNR';
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+    &.--tbright{
+        text-align: right;
+        padding-left: 20px;
+        padding-right: 100px;
+        .titlemain{
+            flex-direction: row-reverse;
+            &::before{
+                margin-right: -80px;
+                right: -20px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .textbox{
+        padding-left: 0;
+        padding-top: 30px;
+        padding-right: 20px;
+        &.--tbright{
+            padding-right: 0;
+            padding-left: 20px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .textbox{
+        padding: 0;
+        margin-bottom: 20px;
+        .titlemain{
+            font-size: 36px;
+        }
+        .description{
+            font-size: 15px;
+        }
+        &.--tbright{
+            padding: 0;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .textbox{
+        margin-bottom: 16px;
+        .titlemain{
+            font-size: 30px;
+        }
+        .description{
+            font-size: 14px;
+        }
+    }
+}
