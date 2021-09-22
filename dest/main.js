@@ -81,23 +81,23 @@ btt.addEventListener('click', function () {
 //     wrapAround: true,
 // });
 
-let menuHeader = document.querySelectorAll('header .menu-header a');
-let HeightHeader = document.querySelector('header').offsetHeight;
-menuHeader.forEach(function (element, index) {
-    // console.log(element); //element: thẻ a
-    element.addEventListener('click', function (e) {
-        e.preventDefault();
-        let href = element.getAttribute('href');
-        let className = href.replace('#', '');
-        let section = document.querySelector('.' + className);
-        let posSection = section.offsetTop;
-        window.scrollTo({
-            top: posSection - HeightHeader,
-            behavior: "smooth"
-        });
-        menuHeader.forEach(function (menu_element, menu_index) {
-            menu_element.classList.remove('active');
-        });
-        element.classList.add('active');
-    });
-});
+// let menuHeader = document.querySelectorAll('header .menu-header a');
+// let HeightHeader = document.querySelector('header').offsetHeight;
+// menuHeader.forEach(function (element, index) {
+//     // console.log(element); //element: thẻ a
+//     element.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         let href = element.getAttribute('href');
+//         let className = href.replace('#', '');
+//         let section = document.querySelector('.' + className);
+//         let posSection = section.offsetTop;
+//         window.scrollTo({
+//             top: posSection - HeightHeader,
+//             behavior: "smooth"
+//         });
+//         menuHeader.forEach(function (menu_element, menu_index) {
+//             menu_element.classList.remove('active');
+//         });
+//         element.classList.add('active');
+//     });
+// });
