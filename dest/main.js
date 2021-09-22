@@ -35,9 +35,9 @@ let heightSlider = slider.clientHeight;
 function changeBgHeader() {
     let scrollY = window.pageYOffset;
     if (scrollY > (heightSlider - heightHeader)) {
-        header.classList.add('.active');
+        header.classList.add('active');
     } else {
-        header.classList.remove('.active');
+        header.classList.remove('active');
     }
 };
 
@@ -45,9 +45,9 @@ let backtoTop = document.querySelector('.totop')
 function showBackToTop() {
     let scrollY = window.pageYOffset;
     if (scrollY > 500) {
-        backtoTop.classList.add('.active');
+        backtoTop.classList.add('active');
     } else {
-        backtoTop.classList.remove('.active');
+        backtoTop.classList.remove('active');
     }
 };
 
@@ -58,6 +58,13 @@ document.addEventListener('scroll', function () {
 
 let backtotop = document.querySelector('footer .backtotop');
 backtotop.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+let btt = document.querySelector('.totop');
+btt.addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -89,8 +96,8 @@ menuHeader.forEach(function (element, index) {
             behavior: "smooth"
         });
         menuHeader.forEach(function (menu_element, menu_index) {
-            menu_element.classList.remove('.active');
+            menu_element.classList.remove('active');
         });
-        element.classList.add('.active');
+        element.classList.add('active');
     });
 });
