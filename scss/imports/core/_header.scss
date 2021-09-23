@@ -49,7 +49,7 @@ header{
                     text-decoration: none;
                     @include transition($t);
 
-                    &:after, &.active{
+                    &:after{
                         content: "";
                         width: 100%;
                         height: 2px;
